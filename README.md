@@ -35,32 +35,38 @@ limitations under the License.
 
 > Perform a series of row interchanges on an input matrix.
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/lapack-base-claswp
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
+To use in Observable,
+
 ```javascript
-var claswp = require( '@stdlib/lapack-base-claswp' );
+claswp = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-claswp@umd/browser.js' )
+```
+
+To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
+
+```javascript
+var claswp = require( 'path/to/vendor/umd/lapack-base-claswp/index.js' )
+```
+
+To include the bundle in a webpage,
+
+```html
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-claswp@umd/browser.js"></script>
+```
+
+If no recognized module system is present, access bundle contents via the global scope:
+
+```html
+<script type="text/javascript">
+(function () {
+    window.claswp;
+})();
+</script>
 ```
 
 #### claswp( N, A, LDA, k1, k2, IPIV, incx )
@@ -211,11 +217,16 @@ claswp.ndarray( 2, A, 2, 1, 2, 0, 2, 1, IPIV, 1, 2 );
 
 <!-- eslint no-undef: "error" -->
 
-```javascript
-var Complex64Array = require( '@stdlib/array-complex64' );
-var Int32Array = require( '@stdlib/array-int32' );
-var ndarray2array = require( '@stdlib/ndarray-base-to-array' );
-var claswp = require( '@stdlib/lapack-base-claswp' );
+```html
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-array@umd/browser.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-claswp@umd/browser.js"></script>
+<script type="text/javascript">
+(function () {
 
 // Specify matrix meta data:
 var shape = [ 4, 2 ];
@@ -233,6 +244,11 @@ var IPIV = new Int32Array( [ 2, 0, 3, 1 ] );
 // Interchange rows:
 claswp( order, shape[ 1 ], A, strides[ 1 ], 0, shape[ 0 ]-1, IPIV, 1 );
 console.log( ndarray2array( A, shape, strides, offset, order ) );
+
+})();
+</script>
+</body>
+</html>
 ```
 
 </section>
@@ -241,73 +257,7 @@ console.log( ndarray2array( A, shape, strides, offset, order ) );
 
 <!-- C interface documentation. -->
 
-* * *
 
-<section class="c">
-
-## C APIs
-
-<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
-
-<section class="intro">
-
-</section>
-
-<!-- /.intro -->
-
-<!-- C usage documentation. -->
-
-<section class="usage">
-
-### Usage
-
-```c
-TODO
-```
-
-#### TODO
-
-TODO.
-
-```c
-TODO
-```
-
-TODO
-
-```c
-TODO
-```
-
-</section>
-
-<!-- /.usage -->
-
-<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
-
-<section class="notes">
-
-</section>
-
-<!-- /.notes -->
-
-<!-- C API usage examples. -->
-
-<section class="examples">
-
-### Examples
-
-```c
-TODO
-```
-
-</section>
-
-<!-- /.examples -->
-
-</section>
-
-<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -393,9 +343,9 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [lapack-claswp]: https://www.netlib.org/lapack/explore-html/d1/d7e/group__laswp_ga9171d769b6ff8099934a845677e336b1.html
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/stdlib/blob/develop/lib/node_modules/%40stdlib/array/complex64
+[@stdlib/array/complex64]: https://github.com/stdlib-js/stdlib/blob/develop/lib/node_modules/%40stdlib/array/complex64/tree/umd
 
-[@stdlib/array/int32]: https://github.com/stdlib-js/stdlib/blob/develop/lib/node_modules/%40stdlib/array/int32
+[@stdlib/array/int32]: https://github.com/stdlib-js/stdlib/blob/develop/lib/node_modules/%40stdlib/array/int32/tree/umd
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
