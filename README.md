@@ -393,9 +393,9 @@ Copyright &copy; 2016-2025. The Stdlib [Authors][stdlib-authors].
 
 [lapack-claswp]: https://www.netlib.org/lapack/explore-html/d1/d7e/group__laswp_ga9171d769b6ff8099934a845677e336b1.html
 
-[@stdlib/array/complex64]: https://github.com/stdlib-js/stdlib/blob/develop/lib/node_modules/%40stdlib/array/complex64
+[@stdlib/array/complex64]: https://github.com/stdlib-js/array-complex64
 
-[@stdlib/array/int32]: https://github.com/stdlib-js/stdlib/blob/develop/lib/node_modules/%40stdlib/array/int32
+[@stdlib/array/int32]: https://github.com/stdlib-js/array-int32
 
 [mdn-typed-array]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/TypedArray
 
