@@ -42,7 +42,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import claswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-claswp@deno/mod.js';
+import claswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-claswp@v0.1.1-deno/mod.js';
 ```
 
 #### claswp( N, A, LDA, k1, k2, IPIV, incx )
@@ -197,7 +197,7 @@ claswp.ndarray( 2, A, 2, 1, 2, 0, 2, 1, IPIV, 1, 2 );
 import Complex64Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-complex64@deno/mod.js';
 import Int32Array from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-int32@deno/mod.js';
 import ndarray2array from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-to-array@deno/mod.js';
-import claswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-claswp@deno/mod.js';
+import claswp from 'https://cdn.jsdelivr.net/gh/stdlib-js/lapack-base-claswp@v0.1.1-deno/mod.js';
 
 // Specify matrix meta data:
 var shape = [ 4, 2 ];
